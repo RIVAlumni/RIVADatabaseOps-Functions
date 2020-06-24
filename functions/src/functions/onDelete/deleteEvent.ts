@@ -7,7 +7,7 @@ import { EventContext } from "firebase-functions"
  *
  * It will automatically delete all participation
  * documents that belong to the deleted event.
- * 
+ *
  * TESTED SUCCESS ON 13/06/2020 AT 4:20 PM
  */
 
@@ -30,5 +30,7 @@ export async function deleteEvent(
     .where("Event Code", "==", Number(context.params["docID"]))
     .get()
 
-  return participationData.forEach(doc => doc.ref.delete())
+  participationData.forEach(doc => doc.ref.delete())
+
+  return
 }

@@ -1,5 +1,4 @@
-import { EventContext } from "firebase-functions"
-import { Change, firestore } from "firebase-functions"
+import { Change, EventContext, firestore } from "firebase-functions"
 import { Participation } from "../../models/collection"
 
 /*

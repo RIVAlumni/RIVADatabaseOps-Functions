@@ -7,7 +7,7 @@ import { EventContext } from "firebase-functions"
  *
  * It will automatically delete all participation
  * documents that belong to the deleted member.
- * 
+ *
  * TESTED SUCCESS ON 10/06/2020 AT 12:50 PM
  */
 
@@ -29,6 +29,8 @@ export async function deleteMember(
     .collection("participations")
     .where("Membership ID", "==", context.params["docID"])
     .get()
-  
-  return participationsData.forEach(doc => doc.ref.delete())
+
+  participationsData.forEach(doc => doc.ref.delete())
+
+  return
 }

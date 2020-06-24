@@ -1,6 +1,5 @@
 import { Event } from "../../models/collection"
-import { EventContext } from "firebase-functions"
-import { Change, firestore } from "firebase-functions"
+import { Change, EventContext, firestore } from "firebase-functions"
 
 /*
  * Listens for document updates in [events]
