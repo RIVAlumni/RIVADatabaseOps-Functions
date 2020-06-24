@@ -34,7 +34,7 @@ export function updateParticipationAggregation(
   }
 
   const oldParticipationData: ParticipationAggregation = {
-    participation: firestore.FieldValue.arrayRemove(oldParticipationsList),
+    participations: firestore.FieldValue.arrayRemove(oldParticipationsList),
     participationsCount: firestore.FieldValue.increment(-1),
   }
 
@@ -48,7 +48,7 @@ export function updateParticipationAggregation(
   }
 
   const newAggregationData: ParticipationAggregation = {
-    participation: firestore.FieldValue.arrayUnion(newParticipationsList),
+    participations: firestore.FieldValue.arrayUnion(newParticipationsList),
     participationsCount: firestore.FieldValue.increment(1),
   }
 

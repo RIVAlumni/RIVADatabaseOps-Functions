@@ -50,7 +50,7 @@ export function deleteParticipationAggregation(
    * count by 1.
    */
   const aggregationData: ParticipationAggregation = {
-    participation: firestore.FieldValue.arrayRemove(participationsList),
+    participations: firestore.FieldValue.arrayRemove(participationsList),
     participationsCount: firestore.FieldValue.increment(-1),
   }
 

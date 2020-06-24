@@ -60,6 +60,6 @@ export interface EventAggregation {
 }
 
 export interface ParticipationAggregation {
-  participation: firestore.FieldValue
+  participations: firestore.FieldValue
   participationsCount: firestore.FieldValue
 }

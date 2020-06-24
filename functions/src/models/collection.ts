@@ -27,7 +27,7 @@ export interface Member {
   "Membership Status": string
   "Name Of Next-Of-Kin": string
   "Relationship With Next-Of-Kin": string
-  "Contact Number Of Next-Of-Kin": number | null
+  "Contact Number Of Next-Of-Kin": number
   "updatedAt": firestore.FieldValue
   "createdAt": firestore.FieldValue
 }

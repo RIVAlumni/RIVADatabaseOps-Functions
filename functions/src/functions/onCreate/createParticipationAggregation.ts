@@ -44,7 +44,7 @@ export function createParticipationAggregation(
       }
 
       const aggregationData: ParticipationAggregation = {
-        participation: firestore.FieldValue.arrayUnion(participationsList),
+        participations: firestore.FieldValue.arrayUnion(participationsList),
         participationsCount: firestore.FieldValue.increment(1),
       }
 
